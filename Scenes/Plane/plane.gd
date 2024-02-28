@@ -26,6 +26,6 @@ func fly(delta: float) -> void:
 		velocity.y += POWER
 		
 func die() -> void:
-	print("DEAD")
 	set_physics_process(false)
 	animated_sprite_2d.stop()
+	SignalManager.on_plane_died.emit()
