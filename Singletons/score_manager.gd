@@ -11,12 +11,10 @@ func get_high_score() -> int:
 
 func set_score(v: int) -> void:
 	_score = v
-	print("set_score: ", _score)
 	
 	# Change high score if new score is higher than previous
 	if _score > _high_score:
 		_high_score = _score
-		print("_high_score: ", _high_score)
 		
 	SignalManager.on_score_updated.emit()
 		
