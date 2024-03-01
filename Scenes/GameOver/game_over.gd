@@ -11,7 +11,7 @@ func _ready():
 	SignalManager.on_plane_died.connect(on_plane_died)
 	
 
-func _process(delta):
+func _process(_delta):
 	if space_label.visible:
 		if Input.is_action_just_pressed("fly"):
 			GameManager.load_main_scene()

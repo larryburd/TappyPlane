@@ -12,10 +12,6 @@ func _ready():
 	spawn_pipes()
 	ScoreManager.set_score(0)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func spawn_pipes() -> void:
 	var new_pipes = pipes_scnee.instantiate()
 	var y_pos = randf_range(spawn_upper.position.y, spawn_lower.position.y)
